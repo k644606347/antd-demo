@@ -1,7 +1,30 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { List, Avatar, Tabs, Form, Button, Layout, Row, Col, Dropdown, Pagination, Steps, Popconfirm, message, DatePicker} from 'antd';
+
+/**
+ * 通过精确指定引入的组件路径，可以最大限度减少bundle文件的大小，缺点是编码繁琐并且需要知道具体的路径
+ */
+import List from 'antd/lib/list';
+import Avatar from 'antd/lib/avatar';
+import Tabs from 'antd/lib/tabs';
+import Form from 'antd/lib/form';
+import Button from 'antd/lib/button';
+import Layout from 'antd/lib/layout';
+import Row from 'antd/lib/row';
+import Col from 'antd/lib/col';
+import Dropdown from 'antd/lib/dropdown';
+import Pagination from 'antd/lib/pagination';
+import Steps from 'antd/lib/steps';
+import Popconfirm from 'antd/lib/popconfirm';
+import message from 'antd/lib/message';
+import DatePicker from 'antd/lib/date-picker';
+/**
+ * 通过 antd一次性导入所有组建，优点是编码简单统一，没有暴露具体路径细节，缺点是会将不需要的组件打入bundle文件
+ */
+// import { List, Avatar, Tabs, Form, Button, Layout, Row, Col, Dropdown, Pagination, Steps, Popconfirm, message, DatePicker} from 'antd';
+import antdStyle from 'antd/dist/antd.css';
+import { lang } from 'moment';
 const TabPane = Tabs.TabPane;
 const data = [
   {
